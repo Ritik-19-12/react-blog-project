@@ -5,7 +5,7 @@ VITE_PROJECT_ID),
 appwriteDatabaseId: String(import.meta.env.
 VITE_DATABASE_ID),
 appwriteTableId: String(import.meta.env.
-VITE_Table_ID),
+VITE_TABLE_ID),
 appwriteBucketId: String(import.meta.env.
 VITE_BUCKET_ID),
 }
