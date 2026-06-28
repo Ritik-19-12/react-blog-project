@@ -69,7 +69,7 @@ export class AuthDatabase {
 
    async getPost(slug) {
         try {
-            return await this.databases.getRow(
+            return await this.tablesDB.getRow(
                 conf.appwriteDatabaseId,
                 conf.appwriteTableId,
                 slug
@@ -82,7 +82,7 @@ export class AuthDatabase {
 
      async getPosts(queries = [Query.equal("status", "active")]) {
         try {
-            return await this.databases.listRows(
+            return await this.tablesDB.listRows(
                 conf.appwriteDatabaseId,
                 conf.appwriteTableId,
                 queries
