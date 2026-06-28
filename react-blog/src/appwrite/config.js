@@ -55,13 +55,12 @@ export class AuthDatabase {
 
   async deletePost(slug){
     try {
-        return await this.tablesDB.deleteRow(
+        await this.tablesDB.deleteRow(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                slug,
-               
-            )
-            return true;
+                slug
+            );
+        return true;
     } catch (error) {
         console.log("Appwrite service :: deletePost :: error", error);
         return false;
@@ -132,5 +131,5 @@ export class AuthDatabase {
 
 }
 
-const authDatabase = AuthDatabase();
+const authDatabase = new AuthDatabase();
 export default authDatabase;
